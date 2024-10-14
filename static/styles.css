@@ -1,0 +1,453 @@
+/* Общее оформление */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #eeb0fa;
+    color: #333;
+}
+
+/* SVG Background */
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Шапка */
+/* Шапка */
+.header {
+    background: linear-gradient(135deg, #e9e9e9, #d180f7);
+    color: white;
+    padding: 5px 0;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Логотип */
+.logo img {
+    height: 50px;
+    margin-top: 10px; /* Регулируйте значение по необходимости */
+}
+
+
+/* Навигация */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffdd57;
+    text-shadow: 0 0 5px rgba(255, 221, 87, 0.5);
+}
+
+/* Гамбургер-меню */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Мобильное меню */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #d180f7b2;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Основной контент */
+main {
+    padding: 30px;
+    padding-top: 100px;
+}
+
+/* Секции */
+section {
+    background: rgba(255, 255, 255, 0.678);
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+/* Услуги */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Общие стили для карточек */
+.service-card {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px; /* Оставляем закругленные углы для мягкого вида */
+    background-color: #f9f9f9; /* Лёгкий фоновый цвет для отделения блоков */
+}
+
+/* Стиль для текста */
+.service-text {
+    flex: 1;
+    color: #666;
+}
+
+/* Стиль для изображения */
+.service-image {
+    flex: 1;
+    text-align: center;
+}
+
+.service-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Стиль для заголовков */
+.service-card h3 {
+    margin-bottom: 10px;
+    text-align: left;
+    color: #333;
+}
+
+/* Для каждого второго блока меняем порядок */
+.service-content.reverse {
+    flex-direction: row-reverse; /* Меняем направление для шахматного порядка */
+}
+
+/* Для заголовков в блоке reverse */
+.service-content.reverse .service-text h3 {
+    text-align: right; /* Выравнивание заголовка вправо */
+}
+
+
+
+
+
+/* Акции */
+#promotions {
+    
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.promotion-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.promotion-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.promotion-card:hover {
+    transform: translateY(-5px);
+}
+
+.promotion-card h3 {
+    font-size: 1.5em;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.promotion-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Галерея */
+.gallery {
+    --s: 200px; /* Переменная --s задает базовый размер изображения (ширина и высота) */
+    --g: 5px; /* Переменная --g определяет размер промежутка (gap) между элементами сетки */
+    --f: 1.5; /* Переменная --f отвечает за коэффициент увеличения при наведении на изображение */
+
+    display: grid; /* Включаем CSS-сетку для галереи, чтобы разместить изображения в строках и колонках */
+    gap: var(--g); /* Применяем промежутки между изображениями с помощью переменной --g */
+    width: 100%; /* Ширина галереи устанавливается на 100%, чтобы занять всю доступную ширину контейнера */
+    aspect-ratio:1; /* Устанавливаем соотношение сторон для галереи 1:1 (квадратная форма) */
+    grid-template-columns: repeat(3, auto); /* Определяем 4 колонки, каждая с автоматической шириной */
+}
+
+.gallery > img {
+    width: 0; /* Изображения изначально имеют ширину 0, это скрывает их по ширине */
+    height: 0; /* Высота изображений также 0, они не видны */
+    min-height: 100%; /* Минимальная высота изображения устанавливается на 100% от контейнера, чтобы оно заполняло пространство */
+    min-width: 100%; /* Минимальная ширина также 100%, чтобы полностью заполнять контейнер */
+    object-fit: cover; /* Изображение масштабируется, сохраняя пропорции и заполняя контейнер */
+    cursor: pointer; /* Курсор меняется на указатель, показывая, что изображение можно кликнуть */
+    filter: grayscale(100%); /* Фильтр устанавливает изображение черно-белым на 80% */
+    transition: .35s linear; /* Переход для всех изменений стилей (например, фильтра или размера) длится 0.35 секунды с линейным эффектом */
+}
+
+.gallery img:hover {
+    filter: grayscale(0); /* При наведении убирается черно-белый фильтр (изображение становится цветным) */
+    width:  calc(var(--s)*var(--f)); /* Ширина изображения увеличивается согласно переменной --s и коэффициенту увеличения --f */
+    height: calc(var(--s)*var(--f)); /* Высота также увеличивается по тому же принципу, создавая эффект "увеличения" изображения */
+}
+
+
+
+/* Формы */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #5c4d8b;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #5c4d8b;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 77, 139, 0.5);
+}
+
+/* Кнопки */
+button {
+    padding: 12px;
+    background: linear-gradient(135deg, #5c4d8b, #483D8B);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #483D8B;
+    transform: translateY(-2px);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #e9e9e9, #d180f7);
+    color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Стили для всей таблицы */
+table {
+    width: 80%;
+    border-collapse: collapse; /* Убирает двойные границы */
+    margin: 20px auto;           /* Выровнять таблицу по центру */
+    border: 2px solid #ddd; /* Общая граница для таблицы */
+}
+
+/* Стили для заголовков таблицы */
+th {
+    background-color: #eeb0fa; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 12px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста */
+    border: 1px solid #ddd; /* Граница для заголовков */
+}
+
+/* Стили для ячеек таблицы */
+td {
+    border: 1px solid #ddd; /* Цвет и стиль границы */
+    padding: 8px; /* Внутренние отступы */
+}
+
+/* Стили при наведении на строки таблицы */
+tr:hover {
+    background-color: #f1f1f1; /* Цвет фона при наведении */
+}
+
+/* Чередующие цвета строк для лучшей читаемости */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Светлый фон для четных строк */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Белый фон для нечетных строк */
+}
+
+/* Стили для ячеек с текстом */
+td {
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 14px; /* Размер шрифта */
+}
+.wide-column {
+    width: 250px; /* или любое другое значение */
+}
+
+.qer {
+    list-style: none; /* Убираем маркеры списка */
+    margin: 0px 0; /* Отступы сверху и снизу */
+}
+
+.qer a {
+    display: inline-block; /* Чтобы кнопка выглядела как блок */
+    padding: 5px 5px; /* Внутренние отступы */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругленные углы */
+    font-weight: bold; /* Жирный текст */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.qer a:hover {
+    background-color: #ffffff; /* Цвет фона при наведении */
+    color: #0004ff9f; /* Цвет текста при наведении */
+}
+ /* кнопка домой в справке*/
+.home-button {
+    position: fixed; /* Фиксированное позиционирование */
+    bottom: 20px; /* Отступ от нижнего края экрана */
+    left: 20px; /* Отступ от левого края экрана */
+    padding: 12px 24px; /* Внутренние отступы */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругленные углы */
+    font-weight: bold; /* Жирный текст */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход цвета */
+    z-index: 1000; /* Чтобы кнопка была поверх других элементов */
+}
+
+.home-button:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+    color: #ffd700; /* Цвет текста при наведении */
+}
+
+/*Основная галлерея*/
+
+.gallery2 {
+    display: flex; /* Использует флексбокс для расположения дочерних элементов в строку */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку, если не помещаются в одну */
+    gap: 10px; /* Устанавливает промежуток в 10 пикселей между элементами */
+}
+
+.thumbnail {
+    width: 200px; /* Устанавливает ширину миниатюры в 150 пикселей */
+    height: 200px; /* Устанавливает высоту миниатюры в 100 пикселей */
+    object-fit: cover; /* Обеспечивает обрезку изображения, сохраняя его пропорции, чтобы заполнить контейнер */
+    cursor: pointer; /* Изменяет курсор на указатель при наведении на миниатюру */
+    transition: transform 0.2s; /* Добавляет плавный переход для эффекта изменения размера при наведении */
+}
+
+.thumbnail:hover {
+    transform: scale(1.3); /* Увеличивает размер миниатюры на 30% при наведении */
+}
+
+.modal {
+    display: none; /* Скрывает модальное окно по умолчанию */
+    position: fixed; /* Устанавливает фиксированное позиционирование, чтобы модальное окно оставалось на экране при прокрутке */
+    z-index: 1000; /* Устанавливает уровень наложения для модального окна, чтобы оно отображалось поверх других элементов */
+    left: 0; /* Выравнивает модальное окно по левому краю экрана */
+    top: 0; /* Выравнивает модальное окно по верхнему краю экрана */
+    width: 100%; /* Устанавливает ширину модального окна на 100% экрана */
+    height: 100%; /* Устанавливает высоту модального окна на 100% экрана */
+    overflow: auto; /* Добавляет прокрутку, если содержимое модального окна превышает его размеры */
+    background-color: rgba(0, 0, 0, 0.8); /* Устанавливает полупрозрачный черный фон для затемнения экрана */
+}
+
+.modal-content {
+    margin: auto; /* Центрирует содержимое модального окна */
+    display: block; /* Устанавливает содержимое как блочный элемент */
+    width: 80%; /* Устанавливает ширину содержимого на 80% экрана */
+    max-width: 700px; /* Устанавливает максимальную ширину содержимого на 700 пикселей */
+}
+
+.close {
+    position: absolute; /* Устанавливает абсолютное позиционирование для кнопки закрытия */
+    top: 20px; /* Выравнивает кнопку закрытия на 20 пикселей от верхнего края */
+    right: 30px; /* Выравнивает кнопку закрытия на 30 пикселей от правого края */
+    color: white; /* Устанавливает цвет текста кнопки закрытия на белый */
+    font-size: 40px; /* Устанавливает размер шрифта кнопки закрытия на 40 пикселей */
+    font-weight: bold; /* Устанавливает жирный шрифт для кнопки закрытия */
+    cursor: pointer; /* Изменяет курсор на указатель при наведении на кнопку закрытия */
+}
+

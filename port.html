@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маникюр</title>
+    
+    <meta name="author" content="Надежда Кожевникова">
+    <meta name="description" content="Профессиональные услуги маникюра и педикюра от частного мастера. Качественные материалы, индивидуальный подход и стильные дизайны для ваших ногтей. Записывайтесь на сеанс уже сегодня!">
+    <meta name="keywords" content="маникюр, педикюр, частный мастер, услуги маникюра, услуги педикюра, ногти, стильный маникюр, красивые ногти, уход за ногами, дизайн ногтей">
+    
+    <meta http-equiv="refresh" content="30">
+    
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- SVG Background -->
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
+                </radialGradient>
+            </defs>
+            <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)">
+                <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)">
+                <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)">
+                <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+            </rect>
+        </svg>
+    </div>
+<!--Навигация-->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="img/45.png" alt="Логотип" />
+        </div>
+<!--БУРГЕР-->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Главная</a></li>                
+                <li><a href="port.html">Портфолио</a></li>
+                <li><a href="index.html#promotions">Акции</a></li>
+                <li><a href="prays.html">Прайс</a></li>
+                <li><a href="bazainfo.html">Знания</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li class="qer"><a href="https://www.avito.ru/dzerzhinsk/predlozheniya_uslug/manikyurpedikyur_2217736543"target="_blank">Онлайн запись</a></li>
+            </ul>
+        </nav>
+        
+        
+    </div>
+    
+</header>
+
+
+<!--Навигация-->
+
+    <!-- Main content with padding-top for header -->
+    <main >
+        <section>
+            <div class="gallery2">
+                <img src="img/2.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/3.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/4.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/5.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/6.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/7.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/8.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/9.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/11.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/12.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/13.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/14.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/15.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/16.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/17.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/18.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/19.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/20.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/21.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/22.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/23.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/24.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/25.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/26.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/27.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/28.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/29.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/30.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/31.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/32.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/33.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/34.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/35.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/36.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/37.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/38.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/39.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/40.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/41.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/42.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/43.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/44.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/45.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/46.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/47.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/48.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/49.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/50.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/51.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/52.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/53.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/54.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/55.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/56.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/57.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/58.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/59.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/60.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/61.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/62.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/63.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/64.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/65.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+                <img src="img/66.jpg" alt="Image 5" class="thumbnail" onclick="openModal(this.src)">
+               
+            </div>
+        
+            <div id="modal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+        
+            <script src="script.js"></script>
+
+        
+
+        </section>
+    
+    </main>
+
+    <footer>
+        <p>© 2024 Ваш мастер - Надежда.</p>
+        <p>Следите за мной на <a href="https://www.avito.ru/brands/7f513184d93d38124976bd3a4596ac42/all?gdlkerfdnwq=101&page_from=from_item_card&iid=2217736543&sellerId=dcca2b78c4ded9d6da27e11850b988af "target="_blank">Avito</a> 
+            и <a href="https://vk.com/kojevnik_nails" target="_blank">ВК</a>.</p>
+    </footer>
+</body>
+</html>
